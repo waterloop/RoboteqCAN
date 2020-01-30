@@ -12,7 +12,7 @@ MCP2515 mcp2515(10);
 
 void setup() {
 
-  writingObject.can_id  = 0x0F6;
+  writingObject.can_id  = 0x1;
   writingObject.can_dlc = 8;
   writingObject.data[0] = 0x8E;
   writingObject.data[1] = 0x87;
@@ -40,7 +40,8 @@ void setup() {
 void loop() {
   
   
-  
+  //DO NOT ADD SENDMESSAGE WITHIN LOOP
+  //WE WANT TO TEST THE COMMAND A COUPLE TIMES, NOT CONSTANTLY
 
   
    if (mcp2515.readMessage(&readObject) == MCP2515::ERROR_OK) {
