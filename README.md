@@ -7,11 +7,14 @@ Useful Links: <br/>
 
 
 See the following on the 
+
 |                      Byte 0                   | Byte 1-2 | Byte 3   | Byte 4-7 |
-|--------|--------------|-------|-------|-------|----------|----------|----------|
-| 3 bits | 1 bit        | 2 bit | 1 bit | 1 bit | 2 bytes  | 1 byte   | 4 bytes  |
-| ccs=1  | reserved(=0) | n     | e     | s     | index    | subindex | data     |
-|        |              |       |       |       |          |          |          |
+|-----------------------------------------------|----------|----------|----------|
+| 3 bits, ccs=1 				| 2 bytes  | 1 byte   | 4 bytes  |
+| 1 bit, reserved(=0) 				| index    | subindex | data     |
+| 2 bit, n
+| 1 bit, e
+| 1 bit, s
 
 ccs is the client command specifier of the SDO transfer, this is 0 for SDO segment download, 1 for initiating download, 2 for initiating upload, 3 for SDO segment upload, 4 for aborting an SDO transfer, 5 for SDO block upload and 6 for SDO block download
 
