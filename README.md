@@ -18,6 +18,16 @@ See the following on the
 | 1 bit, e
 | 1 bit, s
 
+|  Header  |  DLC  |  Byte 0  |  Byte 1-2  |  Byte 3  |  Byte 4-7  |
+| ---------|-------|----------|------------|----------|------------|
+| 0x600 + nd | 8 | *see Byte 0 table* | index | subindex |      data |
+
+<b> Byte 0 table: </b>
+
+|  bits 4-7  |  bits 2-3  |  bits 0-1  |
+| -----------|------------|------------|
+| ccs=1      | n          |  xx=0      |
+
 ccs is the client command specifier of the SDO transfer, this is 0 for SDO segment download, 1 for initiating download, 2 for initiating upload, 3 for SDO segment upload, 4 for aborting an SDO transfer, 5 for SDO block upload and 6 for SDO block download
 
 n is the number of bytes in the data part of the message which do not contain data, only valid if e and s are set
