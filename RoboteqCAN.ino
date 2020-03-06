@@ -15,34 +15,29 @@ void setup() {
 
   writingObject.can_id  = 0x601;
   writingObject.can_dlc = 8;
-  writingObject.data[0] = 0x02;
-  writingObject.data[1] = 0x02;
-  writingObject.data[2] = 0x00;
-  writingObject.data[3] = 0x00;
-  writingObject.data[4] = 0x20;
-  writingObject.data[5] = 0x02;
-  writingObject.data[6] = 0x64;
+  writingObject.data[0] = 0x20;
+  writingObject.data[1] = 0x00;
+  writingObject.data[2] = 0x20;
+  writingObject.data[3] = 0x01;
+  writingObject.data[4] = 0x00;
+  writingObject.data[5] = 0x00;
+  writingObject.data[6] = 0xF4;
+  writingObject.data[7] = 0x01;
   
-  
- for(int i = 7; i < 8; i++){
-    writingObject.data[i] = 0x00; //32
-  }
 
   writingObject1 = writingObject;
   writingObject2 = writingObject;
   writingObject3 = writingObject;
   writingObject4 = writingObject;
 
- writingObject1.data[4] = 0x64;
- writingObject2.data[4] = 0xB4;
- writingObject3.data[4] = 0x86;
- writingObject3.data[5] = 0x01;
- writingObject4.data[4] = 0xF4;
- writingObject4.data[5] = 0x01;
+ writingObject1.data[4] = 0x01;
+ writingObject1.data[5] = 0xF4;
+ writingObject1.data[6] = 0x00;
+ writingObject1.data[7] = 0x00;
 
 //    writingObject.can_id  = 0x601;
 //    writingObject.can_dlc = 8;
-//    writingObject.data[0] = 0x48;
+//    writingObject.data[0] = 0x4B;
 //    writingObject.data[1] = 0x0D;
 //    writingObject.data[2] = 0x21;
 //    writingObject.data[3] = 0x02;
