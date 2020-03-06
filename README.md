@@ -28,6 +28,6 @@ Useful Links:
 
 + `index` is the object dictionary index of the data to be accessed
 + `subindex` is the subindex of the object dictionary variable
-+ `data` contains the data to be uploaded (the response will only contain data if css=`4`)
++ `data` contains the data to be uploaded (the response will only contain data if request object is a query format)
 
-*\*Please see page 33 onward of CAN networking manual for table of available commands/queries
+>Please see page 33 and onward to view available commands/queries in the [CAN networking manual](https://www.generationrobots.com/media/roboteq/can-networking-manual.pdf#page=33).
