@@ -24,9 +24,10 @@ Useful Links:
 
 + `ccs` is the client command specifier of the SDO transfer, this is `0` for SDO segment download, `2` for command, `4` for query, `6` for successful, `8` for error
 + `n` is the amount of bytes that will hold no data
-+ 'xx' is always `0` as we are using using expedited transfer
++ `xx` is always `0` as we are using using expedited transfer
 
 + `index` is the object dictionary index of the data to be accessed
 + `subindex` is the subindex of the object dictionary variable
 + `data` contains the data to be uploaded (the response will only contain data if css=`4`)
+
 *\*Please see page 33 onward of CAN networking manual for table of available commands/queries
